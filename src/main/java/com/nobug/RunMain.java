@@ -47,23 +47,28 @@ public class RunMain {
     private static boolean flag = false;
 
 
-    //    private static List<String> typeList;
-    private static Map<String, String> typeMap;
-
-    static {
-        typeMap = new HashMap<>();
-        typeMap.put("T2T(文档加密)", "T2T");
-        typeMap.put("RT2TM(加密后为MP4文件)", "RT2TM");
-        typeMap.put("RT2MM(加密后为MP4文件)", "RT2MM");
-        typeMap.put("R2T(时间戳)", "R2T");
-        typeMap.put("R2M(MD5)", "R2M");
-        typeMap.put("V2Z", "V2Z");
-    }
+//    //    private static List<String> typeList;
+//    private static Map<String, String> typeMap;
+//
+//    static {
+//        typeMap = new HashMap<>();
+//        typeMap.put("T2T(文档加密)", "T2T");
+//        typeMap.put("RT2TM(加密后为MP4文件)", "RT2TM");
+//        typeMap.put("RT2MM(加密后为MP4文件)", "RT2MM");
+//        typeMap.put("R2T(时间戳)", "R2T");
+//        typeMap.put("R2M(MD5)", "R2M");
+//        typeMap.put("V2Z", "V2Z");
+//    }
 
 
     public RunMain() {
 
-        ComboBoxModel model = comboBox1.getModel();
+        String mode = PropertiesUtil.getValue("mode");
+        String[] split = mode.split(",");
+        DefaultComboBoxModel model = (DefaultComboBoxModel) comboBox1.getModel();
+        for (String s : split) {
+            model.addElement(s);
+        }
 
         vsText.setText(PropertiesUtil.getValue("vs"));
         new DropTarget(textField1, DnDConstants.ACTION_COPY_OR_MOVE,
@@ -137,8 +142,6 @@ public class RunMain {
 
                     String password = textField3.getText();
                     String mode = Objects.requireNonNull(comboBox1.getSelectedItem()).toString();
-
-                    System.out.println("mode:" + mode);
                     //type to type 文件类型不变 V1
                     if (model.getElementAt(0).toString().equals(mode)) {
                         System.out.println("T2T");
@@ -161,7 +164,7 @@ public class RunMain {
                         new Thread(() -> {
                             try {
                                 for (String s : fileList) {
-                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
+                                    String encrypt = AESFile.encrypt(s, password, mode, stautsShow);
                                 }
                             } catch (RuntimeException e1) {
                                 JOptionPane.showMessageDialog(null, e1.getMessage());
