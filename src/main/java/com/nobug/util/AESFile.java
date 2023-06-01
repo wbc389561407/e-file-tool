@@ -13,10 +13,6 @@ import java.util.List;
  */
 public class AESFile {
 
-    public static void main(String[] args) {
-
-    }
-
     /**
      *  V3 V2 解密 回复原文件名称
      * @param path

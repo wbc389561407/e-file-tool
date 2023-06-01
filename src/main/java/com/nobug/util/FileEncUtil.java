@@ -44,14 +44,6 @@ public class FileEncUtil {
 
     static String publicKey =  fileStringReader("publicKey.wbc");
     static String privateKey =  fileStringReader("privateKey.wbc");
-//    static String publicKey =  "";
-//    static String privateKey =  "";
-
-    public static void main(String[] args) {
-
-
-
-    }
 
     private static void initPass() {
         RSAUtil.RSABean rsaBean = null;

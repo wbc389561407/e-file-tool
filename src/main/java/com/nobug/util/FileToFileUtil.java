@@ -17,16 +17,6 @@ import java.util.List;
  */
 public class FileToFileUtil {
 
-    public static void main(String[] args) {
-
-//        encodeFileRSA("C:\\Users\\Administrator\\Desktop\\dev1\\新建文本.txt","123","mp4");
-
-        decoderFileRSA("C:\\Users\\Administrator\\Desktop\\dev1\\新建文本.mp4","123","mp4");
-
-    }
-
-
-
     static String publicKey =  FileIOUtil.fileStringReader("publicKey.wbc");
     static String privateKey =  FileIOUtil.fileStringReader("privateKey.wbc");
 

@@ -142,24 +142,4 @@ public class HashUtil {
         return md5(str).substring(8, 24);
     }
 
-
-
-    /**
-     * 测试方法
-     * @param args
-     */
-    public static void main(String[] args) {
-        String str = "123456";
-        System.out.println("字符串："+str);
-        System.out.println("16位 小写："+md5Short(str));
-        System.out.println("32位 小写："+md5(str));
-        System.out.println("40位 小写："+sha1(str));
-        System.out.println("56位 小写："+sha224(str));
-        System.out.println("64位 小写："+sha256(str));
-        System.out.println("96位 小写："+sha384(str));
-        System.out.println("128位 小写："+sha512(str));
-    }
-
-
-
 }

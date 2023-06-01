@@ -92,15 +92,5 @@ public class AESUtil {
 
     }
 
-    public static void main(String[] args) throws Exception {
-        String password = "5d5aaaafceae4023296c698248097364";
-        String data = "这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！这个是需要加密的数据！";
-        String encrypt = encrypt(data, password);
-        System.out.println("密文："+encrypt);
-        String decrypt = decrypt(encrypt, password);
-        System.out.println("明文："+decrypt);
-
-    }
-
 }
 

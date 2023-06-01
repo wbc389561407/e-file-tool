@@ -13,21 +13,6 @@ import java.util.regex.Pattern;
  * @since 2022-11-22
  */
 public class FileUtil {
-    public static void main(String[] args) {
-
-        //输入路径  获取次文件 或者是获取这个文件夹中的文件
-
-        File[] filesList = getFilesList("C:\\Users\\Administrator\\Desktop\\fileEncryption-v1.0/");
-
-//        String decryptNameTime = getDecryptNameTime("C:\\Users\\Administrator\\Desktop\\fileEncryption-v1.0/readme.txt");
-//        System.out.println(decryptNameTime);
-//        String name = "sdad（12";
-//        boolean matches = Pattern.matches(".*（(\\d+)）", name);
-//        System.out.println(matches);
-//        String s = reFileNamePath("C:\\Users\\Administrator\\Desktop\\fileEncryption-v1.0/readme.txt");
-//        System.out.println(s);
-
-    }
 
     public static File[] getFilesList(String path) {
         File file = new File(path);

@@ -35,7 +35,6 @@ public class RunMain {
     private JLabel passwordmode;
     private JButton fileb;
     private JButton bjia;
-    private JButton bjie;
     private JComboBox comboBox1;
     private JLabel status;
     private JLabel stautsShow;
@@ -59,28 +58,6 @@ public class RunMain {
         typeMap.put("R2T(时间戳)", "R2T");
         typeMap.put("R2M(MD5)", "R2M");
         typeMap.put("V2Z", "V2Z");
-//        typeMap.put("T2T", "T2T(文档加密)");
-//        typeMap.put("RT2TM", "RT2TM(加密后为MP4文件)");
-//        typeMap.put("RT2MM", "RT2MM(加密后为MP4文件)");
-//        typeMap.put("R2T", "R2T(时间戳)");
-//        typeMap.put("R2M", "R2M(MD5)");
-//        typeMap.put("V2Z", "V2Z");
-//        T2T(文档加密)
-//        RT2TM(加密后为MP4文件)
-//        RT2MM(加密后为MP4文件)
-//        R2T(时间戳)
-//        R2M(MD5)
-//        V2Z
-//
-//        typeList = new ArrayList();
-//        typeList.add("T2T(文档加密)");
-//        typeList.add("RT2TM(加密后为MP4文件");
-//        typeList.add("RT2MM(加密后为MP4文件");
-//        typeList.add("R2T(时间戳)");
-//        typeList.add("R2M(MD5)");
-//        typeList.add("V2Z");
-
-
     }
 
 
@@ -195,96 +172,6 @@ public class RunMain {
                         }).start();
                     }
 
-//                    //rename type to Time mp4 文件改为MP4文件 文件名为时间戳 解密后会恢复原有名字
-//                    if (model.getElementAt(1).toString().equals(mode)) {
-//                        System.out.println("RT2TM");
-////                    if ("RT2TM".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-//
-//                    //rename type to MD5 mp4 文件改为MP4文件 文件名为 32为 MD5 解密后会恢复原有名字
-//                    if (model.getElementAt(2).toString().equals(mode)) {
-//                        System.out.println("RT2MM");
-////                    if ("RT2MM".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-//
-//
-//                    //rename to time 文件名改为时间戳  解密后会恢复原有名字 V3
-//                    if (model.getElementAt(3).toString().equals(mode)) {
-//                        System.out.println("R2T");
-////                    if ("R2T".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-//                    //rename to MD5  文件名改为 MD5 解密后会恢复原有名字
-//                    if (model.getElementAt(4).toString().equals(mode)) {
-//                        System.out.println("R2M");
-////                    if ("R2M".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-//
-//                    //Video to zybfq  文件名不改，后缀改为专用播放器格式 解密后会恢复原有名字
-//                    if (model.getElementAt(5).toString().equals(mode)) {
-//                        System.out.println("V2Z");
-////                    if ("V2Z".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String encrypt = AESFile.encrypt(s, password, typeMap.get(mode), stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-
-
                 } else {
                     JOptionPane.showMessageDialog(null, "程序运行中。。。");
                 }
@@ -292,69 +179,6 @@ public class RunMain {
 
             }
         });
-//        bjie.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                if (!flag) {
-//
-//                    System.out.println("解密");
-//                    flag = true;
-//                    runStateText.setText("运行中...");
-//                    String filePath = textField1.getText();
-//                    File file = new File(filePath);
-//                    ArrayList<String> fileList = new ArrayList<>();
-//
-//                    if (file.isDirectory()) {
-//                        File[] filesList = FileUtil.getFilesList(filePath);
-//                        for (File file1 : filesList) {
-//                            fileList.add(file1.getPath());
-//                        }
-//
-//                    } else {
-//                        fileList.add(filePath);
-//                    }
-//
-//                    String password = textField3.getText();
-//                    String mode = Objects.requireNonNull(comboBox1.getSelectedItem()).toString();
-//
-//                    if ("V2Z".equals(mode)) {
-//                        JOptionPane.showMessageDialog(null, "请使用专用播放器播放");
-//                        flag = false;
-//                        return;
-//                    }
-//
-//                    if ("T2T".equals(mode)) {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String decrypt = AESFile.decrypt(s, password, stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    } else {
-//                        new Thread(() -> {
-//                            try {
-//                                for (String s : fileList) {
-//                                    String decrypt = AESFile.decrypt(s, password, mode, stautsShow);
-//                                }
-//                            } catch (RuntimeException e1) {
-//                                JOptionPane.showMessageDialog(null, e1.getMessage());
-//                            }
-//                            flag = false;
-//                            runStateText.setText("未运行");
-//                        }).start();
-//                    }
-//
-//
-//                } else {
-//                    JOptionPane.showMessageDialog(null, "程序运行中。。。");
-//                }
-//            }
-//        });
 
     }
 
@@ -363,17 +187,17 @@ public class RunMain {
         frame.setContentPane(new RunMain().root);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();//获取桌面像素
-        int WIDTH = dim.width / 2;
-        int HEIGHT = dim.height / 2;
-        if (WIDTH < 700) {
-            WIDTH = 700;
-        }
-        if (HEIGHT < 360) {
-            HEIGHT = 360;
-        }
+//        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();//获取桌面像素
+//        int WIDTH = dim.width / 2;
+//        int HEIGHT = dim.height / 2;
+//        if (WIDTH < 700) {
+//            WIDTH = 700;
+//        }
+//        if (HEIGHT < 360) {
+//            HEIGHT = 360;
+//        }
 
-        frame.setSize(WIDTH, HEIGHT);
+        frame.setSize(700, 360);
         frame.setLocationRelativeTo(null);//居中显示
         frame.setVisible(true);
 
