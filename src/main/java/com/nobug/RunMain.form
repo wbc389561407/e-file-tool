@@ -146,14 +146,7 @@
         </constraints>
         <properties>
           <font size="18" style="1"/>
-          <model>
-            <item value="T2T(文档加密)"/>
-            <item value="RT2TM(加密后为MP4文件)"/>
-            <item value="RT2MM(加密后为MP4文件)"/>
-            <item value="R2T(时间戳)"/>
-            <item value="R2M(MD5)"/>
-            <item value="V2Z"/>
-          </model>
+          <model/>
           <toolTipText value=""/>
         </properties>
       </component>

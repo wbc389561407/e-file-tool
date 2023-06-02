@@ -190,6 +190,7 @@ public class RunMain {
         frame.setContentPane(new RunMain().root);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setIconImage(Toolkit.getDefaultToolkit().createImage("icon/simple.png"));
 //        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();//获取桌面像素
 //        int WIDTH = dim.width / 2;
 //        int HEIGHT = dim.height / 2;
@@ -295,12 +296,6 @@ public class RunMain {
         Font comboBox1Font = this.$$$getFont$$$(null, Font.BOLD, 18, comboBox1.getFont());
         if (comboBox1Font != null) comboBox1.setFont(comboBox1Font);
         final DefaultComboBoxModel defaultComboBoxModel1 = new DefaultComboBoxModel();
-        defaultComboBoxModel1.addElement("T2T(文档加密)");
-        defaultComboBoxModel1.addElement("RT2TM(加密后为MP4文件)");
-        defaultComboBoxModel1.addElement("RT2MM(加密后为MP4文件)");
-        defaultComboBoxModel1.addElement("R2T(时间戳)");
-        defaultComboBoxModel1.addElement("R2M(MD5)");
-        defaultComboBoxModel1.addElement("V2Z");
         comboBox1.setModel(defaultComboBoxModel1);
         comboBox1.setToolTipText("");
         root.add(comboBox1, new GridConstraints(3, 3, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
