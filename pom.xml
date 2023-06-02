@@ -92,6 +92,25 @@
                         </configuration>
                     </execution>
 
+                    <!--复制文件夹-->
+                    <execution>
+                        <id>copy-icon</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                            <outputDirectory>${basedir}/target/e-file-tool-${vs}/icon</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>icon</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
                     <!--复制文件-->
                     <execution>
                         <id>copy-jar</id>
