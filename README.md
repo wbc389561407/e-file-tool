@@ -7,6 +7,17 @@
 ### R2M：rename to MD5  文件名改为 MD5 解密后会恢复原有名字
 ### 
 
+# 关联项目
+### 加密项目
+### https://github.com/wbc389561407/e-file-tool.git
+
+### 解密项目
+### https://github.com/wbc389561407/d-file-tool.git
+
+### 简单播放器
+### https://github.com/wbc389561407/simple-player.git
+
+
 # 项目启动说明
 ### 一.配置idea
 File | Settings | Editor | GUI Designer
