@@ -190,7 +190,7 @@ public class RunMain {
         frame.setContentPane(new RunMain().root);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setIconImage(Toolkit.getDefaultToolkit().createImage("icon/simple.png"));
+        frame.setIconImage(Toolkit.getDefaultToolkit().createImage("icon/favicon.png"));
 //        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();//获取桌面像素
 //        int WIDTH = dim.width / 2;
 //        int HEIGHT = dim.height / 2;
